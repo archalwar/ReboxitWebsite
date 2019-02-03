@@ -1,0 +1,214 @@
+<div class="">
+  <div class="header-main">
+    <div class="container">
+      <div class="brand-logo">
+        <a routerLink="/landing"> <img src="../assets/images/Categories/logo.png"></a>
+      </div>
+    </div>
+  </div>
+  <!-----Navigation Starts Here-------------------->
+
+
+  <nav class="navbar navbar-expand-sm navbar-light bg1">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse  drag" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/design">Price List </a>
+          </li>
+          <li class="nav-item poi active">
+            <a class="nav-link" routerLink="/design">Book a Pickup</a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/associate">Associates</a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/design"> My Account</a>
+          </li>
+
+          <li class="nav-item poi">
+            <a class="nav-link" (click)="logout()"> Logout</a>
+          </li>
+
+          <li class="nav-item poi">
+            <a class="nav-link">Help</a>
+          </li>
+
+          <li class="nav-item  poi">
+            <a class="nav-link" routerLink="/cart"><i class="fas fa-shopping-cart"></i><span>{{cm}}11</span></a>
+          </li>
+
+
+          <li class="nav-item poi border-left">
+            <a class="nav-link rotate"><i class="fa fa-phone"></i></a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!----Address fields -------------------------->
+
+  <div class="box-container-main">
+
+
+    <div class="container">
+      <div class="box-container">
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <p class="page-head">Where and When do we come to Pick your <span>SCRAP?</span></p>
+          </div>
+        </div>
+
+        <div class="d-flex  container ">
+          <form [formGroup]="pickupForm" class="pickup-form">
+
+            <div class="form-row col-md-12">
+              <div class="col-md-6">
+                <div class="form-group ">
+                  <label for="pincode">Pincode : </label>
+                  <input type="text" formControlName="pincode" class="form-control" id="inputEmail4" placeholder="Enter Pincode">
+                </div>
+                <div *ngIf="pickupForm.get('pincode').hasError('required') && pickupForm.get('pincode').touched " class="alert alert-danger ">
+                  Pincode is required
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group ">
+                  <label for="exampleFormControlSelect1">Available slots:</label>
+                  <select formControlName="slot" class="form-control form-control-sm" id="exampleFormControlSelect1">
+                    <option value="0">Available slots</option>
+                    <option value="21/12/2018">21/12/2018</option>
+                    <option value="28/12/2018">28/12/2018</option>
+
+                  </select>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-row col-md-12">
+              <div class="col-md-6">
+                <div class="form-group ">
+                  <label for="location">Location</label>
+                  <select id="inputState" formControlName="location" class="form-control">
+                    <option value="0">Select Location</option>
+                    <option *ngFor="let m of location" value={{m}}>{{m}}</option>
+                  </select>
+
+                </div>
+                <div *ngIf="pickupForm.get('location').hasError('required') && pickupForm.get('location').touched "
+                  class="alert alert-danger">
+                  Location is required
+                </div>
+              </div>
+
+
+              <div class="col-md-6">
+                <div class="form-group ">
+                  <label for="add1">Address</label>
+                  <input type="text" formControlName="address" class="form-control" id="inputAddress" placeholder="Enter Address">
+                </div>
+                <div *ngIf="pickupForm.get('address').hasError('required') && pickupForm.get('address').touched " class="alert alert-danger">
+                  Adress is required
+                </div>
+              </div>
+            </div>
+
+
+            <!--
+            <div class="form-row col-md-12">
+
+              <div class="form-group col-md-12">
+                <input type="text" formControlName="address1" class="form-control" id="inputAddress1">
+              </div>
+            </div>-->
+
+
+            <div class="form-row col-md-12">
+              <div class="col-md-6">
+                <div class="form-group ">
+                  <label for="city">City</label>
+                  <input type="text" formControlName="city" class="form-control" id="inputCity" placeholder="Enter City">
+
+                </div>
+                <div *ngIf="pickupForm.get('city').hasError('required') && pickupForm.get('city').touched " class="alert alert-danger">
+                  City is required
+                </div>
+
+              </div>
+
+
+              <div class="col-md-6">
+                <div class="form-group ">
+                  <label for="state">State</label>
+                  <select id="inputState" formControlName="state" class="form-control">
+                    <option value="0">Select State</option>
+                    <option *ngFor="let m of states" value={{m}}>{{m}}</option>
+                  </select>
+
+                </div>
+                <div *ngIf="pickupForm.get('state').hasError('required') && pickupForm.get('state').touched " class="alert alert-danger">
+                  State is required
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="form-row col-md-12">
+               
+  
+  
+                <div class="col-md-6">
+                  <div class="form-group ">
+                      <label for="phone">Phone number</label>
+                      <input type="text" formControlName="phone" class="form-control" id="phone" placeholder="Enter phone number">
+  
+                  </div>
+                  <div *ngIf="pickupForm.get('phone').hasError('required') && pickupForm.get('phone').touched " class="alert alert-danger">
+                      Phone number is required
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="form-group ">
+                        <label for="phone">Alternate Phone number</label>
+                        <input type="text" formControlName="altphone" class="form-control" id="altphone" placeholder="Alternate phone number">
+    
+                    </div>
+                  
+                  </div>
+              </div>
+
+
+            
+  
+  
+            <div class=" form-row col-md-12 text-center justify-content-center">
+              <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-success btn-block" (click)="onSubmit()" [disabled]="!pickupForm.valid">
+                  Proceed</button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+  </div>

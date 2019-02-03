@@ -1,0 +1,120 @@
+ 
+<div class="main-height">
+    <div class="header-main">
+        <div class="container">
+          <div class="brand-logo">
+            <a routerLink="/landing"> <img src="../assets/images/Categories/logo.png"></a>
+          </div>
+        </div>
+      </div>
+  <!-----Navigation Starts Here-->
+
+
+  <nav class="navbar navbar-expand-sm navbar-light bg1">
+      <div class="container">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse  drag" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item poi">
+                <a class="nav-link" (click)="showLogin()" >Login</a>
+            </li>
+            <li class="nav-item poi active">
+                <a class="nav-link" (click)="showSignup()">SignUp</a>
+            </li>
+            <li class="nav-item poi">
+                <a class="nav-link" (click)="showAsso()">Associates</a>
+            </li>
+            <li class="nav-item poi">
+                <a class="nav-link" routerLink="/signupadmin">Admin Signup</a>
+            </li>
+  
+           
+  
+            <li class="nav-item poi">
+              <a class="nav-link">Help</a>
+            </li>
+            <li class="nav-item poi border-left">
+              <a class="nav-link rotate"><i class="fa fa-phone"></i></a>
+            </li>
+          </ul>
+  
+        </div>
+      </div>
+    </nav>
+
+
+
+  
+  <!---Form Starts Here-->
+
+  <div class="bg">
+    <div class="">
+
+     
+    </div>
+      <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12 text-center text-white">Admin Singup</div>
+          <div class="col-md-4 col-sm-4 col-xs-12 add">
+          
+      
+     <!---Login Form starts here-->
+            <div class="">
+                <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="form-container">
+                    <div class="alert alert-danger" *ngIf="error">
+                        <strong>{{error}}</strong>
+                      </div>
+                   
+                    <div class="form-group">
+                       
+                        <input type="text" formControlName="email"  class="form-control form-control-sm" placeholder="enter email"/>
+                    </div>
+
+                    <div *ngIf="signupForm.get('email').hasError('required') && signupForm.get('email').touched" class="alert alert-danger">
+                            email is required
+                    </div>
+                    <div *ngIf="signupForm.get('email').hasError('email') " class="alert alert-danger">
+                        email is invalid
+                   </div>
+                    <div class="form-group">
+                        
+                        <input type="password" formControlName="password" class="form-control form-control-sm" placeholder="enter password"   />
+                     </div >
+                  
+                  <div *ngIf="signupForm.get('password').hasError('required') && signupForm.get('password').touched" class="alert alert-danger">
+                           password required
+                  </div>
+                  <div *ngIf="signupForm.get('password').hasError('minlength')  " class="alert alert-danger">
+                      password must be 8 characters
+                 </div>
+                   
+                    
+                  
+               
+                  <div class="text-center" >
+                      <button  class="btn btn-success btn-sm btn-block" (click)="submit()">
+                          Sign Up Admin
+                      </button>
+                     
+                  </div>
+                  
+                 
+                 </form>
+               
+                </div>
+
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12"></div>
+          </div>
+          
+    
+      </div>
+    </div>
+    
+   
+            
+          

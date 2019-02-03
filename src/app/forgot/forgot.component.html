@@ -1,0 +1,105 @@
+
+<div class="main-height">
+  <div class="">
+     <a routerLink="/landing"> <img src="../assets/images/Categories/logo1.png"></a>
+   
+  </div>
+  <!-----Navigation Starts Here-->
+
+<nav class="navbar navbar-expand-sm navbar-light bg1">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse  drag" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item poi">
+          <a class="nav-link" >Price List <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item poi">
+          <a class="nav-link" (click)="showLogin()" >Login</a>
+        </li>
+        <li class="nav-item poi">
+            <a class="nav-link" (click)="showSignup()">SignUp</a>
+       </li>
+         <li class="nav-item poi">
+              <a class="nav-link" (click)="showAsso()">Associates</a>
+         </li>
+       <li class="nav-item poi">
+          <a class="nav-link" >Help</a>
+     </li>
+     <li class="nav-item poi">
+          <a class="nav-link" ><i class="fas fa-phone"></i></a>
+      </li>
+      </ul>
+    
+    </div>
+  </nav>
+  
+  <!---Form Starts Here-->
+
+  <div class="bg">
+    <div class="">
+
+     
+    </div>
+      <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12"></div>
+          <div class="col-md-4 col-sm-4 col-xs-12 add">
+          
+      
+     <!---Login Form starts here-->
+            <div class="">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-container">
+                   
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" formControlName="phone"  class="form-control form-control-sm"  />
+                    </div>
+
+                    <div *ngIf="loginForm.get('phone').hasError('required') && loginForm.get('phone').touched" class="alert alert-danger">
+                            phone  number is required
+                    </div>
+                   
+                    <div class="form-group">
+                        <label>Enter OTP</label>
+                        <input type="password" formControlName="otp" class="form-control form-control-sm"   />
+                     </div >
+                  
+                  <div *ngIf="loginForm.get('otp').hasError('required') && loginForm.get('password').touched" class="alert alert-danger">
+                           password required
+                  </div>
+                 
+                   
+                    
+                  
+               
+                  <div class="text-center" >
+                      <button type="submit" class="btn btn-success " >
+                          <a routerLink="/pickup" style="color:white;">Submit</a>
+                      </button>
+                  </div>
+                  
+                 
+                  <!-- <div class="text-center" style="padding: 9px 0 0 0;">
+                      <button type="submit" class="btn btn-success ">
+                             <a routerLink="/scrape" style="color:white;">Ass-Log In</a>
+                      </button>
+                 </div> -->
+
+                 </form>
+               
+                </div>
+
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12"></div>
+          </div>
+          
+    
+      </div>
+    </div>
+    
+   
+            
+          

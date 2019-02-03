@@ -1,0 +1,82 @@
+<div class="">
+
+  <div class="header-main">
+    <div class="container">
+      <div class="brand-logo">
+        <a routerLink="/landing"> <img src="../assets/images/Categories/logo.png"></a>
+      </div>
+    </div>
+  </div>
+  <!-----Navigation Starts Here-->
+
+  <nav class="navbar navbar-expand-sm navbar-light bg1">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse  drag" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/pricelist">Price List </a>
+          </li>
+
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/design">Book a Pickup</a>
+          </li>
+
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/associate">Associates</a>
+          </li>
+
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/myaccount"> My Account</a>
+          </li>
+
+          <li class="nav-item  poi">
+            <a class="nav-link" (click)="logout()">Logout</a>
+          </li>
+
+          <li class="nav-item poi">
+            <a class="nav-link">Help</a>
+          </li>
+
+          <li class="nav-item  poi">
+            <a class="nav-link" routerLink="/cart"><i class="fas fa-shopping-cart"></i><span>{{cm}}</span></a>
+          </li>
+          <li class="nav-item poi border-left">
+            <a class="nav-link rotate"><i class="fa fa-phone"></i></a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="container">
+
+    <div class="page-title">
+      <h4 class="text-center text-uppercase">Collections</h4>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of categories" (click)="subcol(item[0])">
+
+        <div class="card">
+          <img class="card-img-top img-responsive" src="{{item[1]}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="text-center">{{item[0]}}</h5>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

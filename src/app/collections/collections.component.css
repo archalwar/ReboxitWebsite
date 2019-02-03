@@ -1,0 +1,144 @@
+/* logo && navigation*/
+
+    .bg1{
+        background: #3d882f;
+    }
+
+.drag ul li a{
+        color:white;
+        font-size: 18px;
+        padding: 0 15px;
+}
+
+/* Cards align*/
+
+.align{
+    width:150px;
+    height: 150px;
+    
+}
+.poi{
+    cursor: pointer;
+}
+
+
+/* top header css */
+
+.header-main {
+    background-color: #fefefe;
+}
+
+.header-main .brand-logo {
+    width: 100px
+}
+
+.header-main .brand-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.border-left {
+    border: 0px !important;
+    position: relative;
+}
+
+.border-left a::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 15px;
+    width: 100%;
+    bottom: 0;
+    border-left: 1px solid #fff;
+    top: 0;
+    left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 1px;
+}
+
+.rotate i {
+    transform: rotate(100deg);
+}
+
+.drag ul li a {
+    color: #fff;
+    font-size: 1rem;
+    padding: 13px 30px;
+}
+
+.drag ul li:hover {
+    background-color: #4ca115;
+}
+
+.active {
+    background-color: #4ca115;
+}
+
+.poi span {
+    background-color: #ef1111;
+    margin: 0 5px;
+    padding: 2px 2px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 8px;
+    position: relative;
+    top: -13px;
+    left: -13px;
+}
+
+/* top header css ends here */
+
+
+/* custom css starts here */
+
+.page-title{
+    margin:  20px auto;
+  }
+
+  /*
+
+  h4::before{
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: rgb(33,37,41);
+    position: relative;
+    display: inline-block;
+    top: -4px;
+    margin-right: 15px;
+  }
+  h4::after{
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: rgb(33,37,41);
+    position: relative;
+    display: inline-block;
+    top: -4px;
+    margin-left: 15px;
+  }
+  */
+
+  .card-img-top{
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    max-width: 150px;
+    max-height: 150px;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .card{
+    cursor: pointer;
+    border: 0px solid #6b6969 !important;
+    box-shadow: 0 2px 15px #d4d4d4;
+    border-radius: 0;
+    margin-bottom: 25px;
+  }
+
+ 

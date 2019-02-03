@@ -1,0 +1,118 @@
+/* logo & navigation*/
+
+.bg1 {
+    background: #3c8a2e;
+}
+
+.poi {
+    cursor: pointer;
+}
+
+/* top header css */
+
+.header-main {
+    background-color: #fefefe;
+}
+
+.header-main .brand-logo {
+    width: 100px
+}
+
+.header-main .brand-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.border-left {
+    border: 0px !important;
+    position: relative;
+}
+
+.border-left a::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 15px;
+    width: 100%;
+    bottom: 0;
+    border-left: 1px solid #fff;
+    top: 0;
+    left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 1px;
+}
+
+.rotate i {
+    transform: rotate(100deg);
+}
+
+.drag ul li a {
+    color: #fff;
+    font-size: 1rem;
+    padding: 13px 30px;
+}
+
+.drag ul li:hover {
+    background-color: #4ca115;
+}
+
+.active {
+    background-color: #4ca115;
+}
+
+.poi span {
+    background-color: #ef1111;
+    margin: 0 5px;
+    padding: 2px 2px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 8px;
+    position: relative;
+    top: -13px;
+    left: -13px;
+}
+
+/* top header css ends here */
+
+/* body box css starts here */
+
+.box-container-main {
+    background: #f9f9f9;
+    padding: 30px;
+}
+
+.box-container {
+    background: #fff;   
+    min-height: 600px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.page-head {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.page-head span {
+    color: #3c8a2e;
+}
+
+form.pickup-form {
+    width: 80%;
+    margin: 15px auto 30px;
+}
+
+.alert-danger {    
+    margin-right: 0.3rem;
+}
+
+form .form-group  label{
+    display: none;
+}
+
+.form-group{
+    margin-right: 0.3rem;
+}

@@ -1,0 +1,201 @@
+
+<div class="">
+
+  <div class="header-main">
+    <div class="container">
+      <div class="brand-logo">
+        <a routerLink="/landing"> <img src="../assets/images/Categories/logo.png"></a>
+      </div>
+    </div>
+  </div>
+  <!-----Navigation Starts Here-->
+
+  <nav class="navbar navbar-expand-sm navbar-light bg1">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse  drag" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/pricelist">Price List </a>
+          </li>
+          <li class="nav-item poi active">
+            <a class="nav-link" routerLink="/pickup">Book a Pickup</a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/associate">Associates</a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/myaccount"> My Account</a>
+          </li>
+
+          <li class="nav-item poi">
+            <a class="nav-link" (click)="logout()"> Logout</a>
+          </li>
+
+
+          <li class="nav-item poi">
+            <a class="nav-link">Help</a>
+          </li>
+          <li class="nav-item poi border-left">
+            <a class="nav-link rotate"><i class="fa fa-phone"></i></a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!---order summary------>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Order Summary</h1>
+        <p class="txt-sm">By clicking on the 'Confirm Pickup and Checkout' button, you agree to Reboxit.in privacy
+          notice and conditions of use.</p>
+      </div>
+    </div>
+
+
+    <div class="">
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 sec">
+          <h5>Personal Information:
+            <span class="float-right"><a routerLink="">Add or Change</a></span>
+
+          </h5>
+
+          <p>{{name}}</p>
+          <p>Phone:{{phone}}</p>
+          <p>Mail I'd:{{email}}</p>
+          <p class="txt-bld mar-top">Address:</p>
+          <p>{{address}}</p>
+          <p>Alternate Number: {{alter}}</p>
+        </div>
+        <div class="col-md-2"></div>
+
+      </div>
+
+    </div>
+    <!-----scrape details---------------->
+    <div class="">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 sec">
+          <h5>Scrap Details:
+            <span class="float-right"><a routerLink="">Add or Change</a></span>
+          </h5>
+
+
+          <p><span class="tab-wid">Selected slot</span> : {{slot}}</p>
+          <p><span class="tab-wid">Estimarted Quantity</span> : {{totalkg}}</p>
+          <p><span class="tab-wid">Estimarted Price</span> : {{totalamt}}</p>
+
+        </div>
+        <div class="col-md-2"></div>
+
+      </div>
+
+    </div>
+
+    <!-------cash payment------->
+    <!-------cash payment------->
+
+    <div class="">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 sec pay-details">
+          <h5 class="text-center">How do you want us to pay ??</h5>
+          <div class="box">
+
+            <p>
+
+              <i class="fas fa-money-check"></i>
+              <a (click)="showBank()">
+                Bank
+              </a>
+            </p>
+            <div *ngIf="bank">
+              <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1">
+
+                  <input type="text" class="form-control form-control-sm" id="acname" placeholder="Name">
+                </div>
+
+                <div class="col-sm-3 my-1">
+
+                  <input type="text" class="form-control form-control-sm" id="acbank" placeholder="Bank Name">
+                </div>
+                <div class="col-sm-3 my-1">
+
+                  <input type="text" class="form-control form-control-sm" id="acno" placeholder="Acc No">
+                </div>
+
+
+                <div class="col-sm-3 my-1">
+
+                  <input type="text" class="form-control form-control-sm" id="acifsc" placeholder="Ifsc">
+                </div>
+              </div>
+            </div>
+
+            <p>
+              <a (click)="showUpi()">
+                <img src="../../assets/login/upi.png" width="60px" height="30px">
+              </a>
+            </p>
+            <div *ngIf="upi">
+              <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1">
+                  <label class="sr-only" for="inlineFormInputName">Name</label>
+                  <input type="text" class="form-control form-control-sm" id="upino" placeholder="Enter UPI number">
+                </div>
+              </div>
+            </div>
+
+            <p>
+              <a (click)="showPaytm()">
+                <img src="../../assets/login/paytm.png" width="60px" height="30px">
+              </a>
+
+            </p>
+            <div *ngIf="paytm">
+              <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1">
+                  <label class="sr-only" for="inlineFormInputName">Name</label>
+                  <input type="text" class="form-control form-control-sm" id="paytmno" placeholder="Enter paytm number">
+                </div>
+
+              </div>
+            </div>
+
+            <p (click)="showCash()">
+              <img src="../../assets/login/cash2.png" width="50px" height="30px">
+              <span> Cash </span>
+            </p>
+
+
+          </div>
+
+
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+
+    </div>
+
+    <!----upi-->
+    <div class="text-center btn-btm">
+      <button class=" btn btn-success" (click)="submitData()">Proceed to Checkout</button>
+    </div>
+
+  </div>
+
+</div>

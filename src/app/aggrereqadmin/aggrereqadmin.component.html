@@ -1,0 +1,72 @@
+
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="">
+                <a routerLink="/landing"> <img src="../assets/images/Categories/logo1.png"></a>
+              
+             </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+        </div>
+
+    </div>
+
+    
+     <!-----------Navigation Starts Here-->
+   
+   <nav class="navbar navbar-expand-sm navbar-light bg1">
+       <a class="navbar-brand" href="#"></a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse  drag" id="navbarSupportedContent">
+         <h4>{{companyname}}</h4>
+         <ul class="navbar-nav ml-auto ">
+
+              <li class="nav-item poi">
+                  <a class="nav-link" routerLink="/aggregator" ><p id="size">Assigned pickups</p></a>
+                </li>
+              <li class="nav-item poi">
+                <a class="nav-link" routerLink="/aggrereqadmin"><p style="font-size:18px;">Request Admin</p></a>
+              </li>
+
+              <li class="nav-item poi">
+                <a class="nav-link" (click)="logout()"><p style="font-size:18px;">Logout</p></a>
+              </li>
+         </ul>
+       
+       </div>
+     </nav>
+
+
+
+
+
+     <div class="d-flex justify-content-center align-items-center container card bg-dark text-white" >
+      <form [formGroup]="pickupForm" class="form-horizontal col-md-8">
+            <div *ngFor="let p of prods" class="form-group row pt-2">
+                <label class="control-label col-sm-2" for="{{p}}">{{p}}</label>
+                <div class="col-sm-10">
+                  <input class="form-control" formControlName="{{p}}" type="number" [(ngModel)]="cart[p]">
+                </div>
+                
+            </div>
+
+
+
+
+
+
+
+
+
+          
+        
+              <div class="text-center">  
+                <button type="submit" class="btn btn-success" (click)="onSubmit()" [disabled]="!pickupForm.valid">
+                Proceed
+                </button>
+              </div>
+        </form>
+   </div>

@@ -1,0 +1,261 @@
+<div class="">
+  <div class="header-main">
+    <div class="container">
+      <div class="brand-logo">
+        <a routerLink="/landing"> <img src="../assets/images/Categories/logo.png"></a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-----------Navigation Starts Here-->
+
+  <nav class="navbar navbar-expand-sm navbar-light bg1">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse  drag" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/design">Assigned Pickups</a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/design">Alloted Drops</a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/associate">Request Admin</a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/design"> Request Aggregator</a>
+          </li>
+
+          <li class="nav-item poi">
+            <a class="nav-link">My Sheets</a>
+          </li>
+          <li class="nav-item poi border-left">
+            <a class="nav-link rotate"><i class="fa fa-phone"></i></a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+
+
+    <div class="row">
+      <div class="col-md-12 ">
+        <div class="float-right row-right">
+          <div class="dropdown inline-block">
+            <button class="btn dropdown-toggle toggle-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-filter" aria-hidden="true"></i> Sort by
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Pincode</a>
+              <a class="dropdown-item" href="#">Locality</a>
+
+            </div>
+          </div>
+
+          <div class="inline-block mb-3">
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+              placeholder="Enter Pincode">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Slot</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Alt Phone No</th>
+          <th scope="col">Payment Mode</th>
+          <th scope="col">Quantity/Number</th>
+          <!-- 
+           
+           <th scope="col">Email</th>
+           <th scope="col">Slot</th>
+          <th scope="col">Estimated Wt</th>
+          <th scope="col">Estimated Cost</th>
+          <th scope="col">Updated Details</th>
+        -->
+          <th scope="col"  class="text-center">Price</th>
+          <th scope="col" class="text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of assignedPickups let idx=index">
+          <td>{{i["slot"]}}</td>
+          <td>{{i["name"]}}</td>
+          <td>{{i["address"]}}</td>
+          <td>{{i["phone"]}}</td>
+          <td>{{i["alterphone"]}}</td>
+          <td>{{i["payment"]}}</td>
+          <td></td>
+          <!--
+          <td>{{i["email"]}}</td>
+          <td>{{i["slot"]}}</td>
+          <td>{{i["totalwt"]}} Kgs</td>
+          <td>Rs {{i["totalamt"]}}</td>
+          
+          <td>
+            <button class="btn btn-lg btn-outline-primary" (click)="open(content,idx)">Update</button>
+          </td>
+
+          -->
+          <td>Rs {{finalcost[idx]}}</td>
+          <td>
+            <button class="btn btn-lg btn-outline-info" (click)="submit(idx)">Confirm</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>10-10-2019</td>
+          <td>Pranavi</td>
+          <td>RTC Colony, 500014</td>
+          <td>9866723654</td>
+          <td>9866723654</td>
+          <td class="text-center">UPI</td>
+          <td class="text-center">35 <p><a href="#">Edit</a></p>
+          </td>
+          <td class="text-center">Rs 40/-</td>
+          <td class="text-center">Pending
+            <p class="icons">
+              <i class="fa fa-check " aria-hidden="true"></i>
+
+              <i class="fa fa-times"></i>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>10-10-2019</td>
+          <td>Pranavi</td>
+          <td>RTC Colony, 500014</td>
+          <td>9866723654</td>
+          <td>9866723654</td>
+          <td class="text-center">UPI</td>
+          <td class="text-center">35 <p><a href="#">Edit</a></p>
+          </td>
+          <td class="text-center">Rs 40/-</td>
+          <td class="text-center">Pending
+            <p class="icons">
+              <i class="fa fa-check " aria-hidden="true"></i>
+
+              <i class="fa fa-times"></i>
+            </p>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>10-10-2019</td>
+          <td>Pranavi</td>
+          <td>RTC Colony, 500014</td>
+          <td>9866723654</td>
+          <td>9866723654</td>
+          <td class="text-center">UPI</td>
+          <td class="text-center">35 <p><a href="#">Edit</a></p>
+          </td>
+          <td class="text-center">Rs 40/-</td>
+          <td class="text-center">Pending
+            <p class="icons">
+              <i class="fa fa-check " aria-hidden="true"></i>
+
+              <i class="fa fa-times"></i>
+            </p>
+          </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+    <div class="inner-table">
+      <table class="table borderless">
+        <thead>
+          <tr>
+            <th> Items</th>
+            <th class="text-center"> Estimated Kg/Number</th>
+            <th class="text-center"> Actual Kg/Number</th>
+            <th class="text-center"> Price</th>
+            <th> </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Newspaper & Magazines</td>
+            <td class="text-center">10</td>
+            <td class="text-center">05</td>
+            <td class="text-center">50</td>
+            <td rowspan="4" class="update-btn"><button class="btn btn-primary">Update</button></td>
+          </tr>
+
+          <tr>
+            <td>Newspaper & Magazines</td>
+            <td class="text-center">10</td>
+            <td class="text-center">05</td>
+            <td class="text-center">50</td>
+          </tr>
+
+          <tr>
+            <td>Newspaper & Magazines</td>
+            <td class="text-center">10</td>
+            <td class="text-center">05</td>
+            <td class="text-center">50</td>
+          </tr>
+
+          <tr>
+            <td>Newspaper & Magazines</td>
+            <td class="text-center">10</td>
+            <td class="text-center">05</td>
+            <td class="text-center">50</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <div>
+        <p><span class="circle-plus"><i class="fa fa-plus" aria-hidden="true"></i></span></p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Update Details</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click');updateCost();">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-row align-items-center">
+          <div *ngFor="let g of products let idx=index" class="col-sm-6 my-1">
+            <label class="control-label" for="{{g}}">{{g}}</label>
+            <input type="number" class="form-control form-control-sm" id="{{g}}" name="{{g}}" placeholder="{{g}}"
+              [(ngModel)]="universalcart[g]" (change)="showCart()">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click');updateCost();">Save</button>
+    </div>
+  </ng-template>

@@ -1,0 +1,44 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    padding: 0rem;
+}
+
+
+
+
+
+
+
+.form-group input, .form-group select{
+    padding: 0.5rem;
+    border: 1px solid #6b6969;
+    background: transparent;
+    border-radius: 2px;
+    color: #000;
+    font-size: 16px;
+    height: 42px;
+}
+
+.form-group input::placeholder{
+    color: #000;
+}
+
+.form-group input:focus{
+    border-color: #3c8a2e;
+    box-shadow: 0 0 0 0.2rem rgba(61,136,47,.25);
+    background: transparent;
+}
+
+.btn.btn-success{
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 1.4rem;   
+}

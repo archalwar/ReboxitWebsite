@@ -1,0 +1,109 @@
+/* logo && navigation*/
+
+.bg1{
+    background: #3c8a2e;
+}
+
+
+.poi{
+cursor: pointer;
+}
+
+/* content */
+.sec{
+border: 1px solid #000;
+padding: 10px 15px;
+margin: 20px 0;
+}
+
+/* top header css */
+.header-main{
+    background-color: #fefefe;
+}
+.header-main .brand-logo{
+    width: 100px
+}
+.header-main .brand-logo img{
+    width: 100%;
+    height: auto;
+}
+.border-left {
+    border-left: 2px solid #fff !important;
+}
+
+.rotate {
+    -webkit-transform: rotate(100deg);
+    transform: rotate(100deg);
+}
+
+.drag ul li a {
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 30px;
+}
+.active a {
+    text-decoration: underline;
+}
+
+.poi span{
+    background-color: #ef1111;
+    margin: 0 5px;
+    padding: 3px 2px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+  }
+
+
+
+/* top header css ends here */
+
+.txt-sm{
+    font-size: 0.6rem;
+}
+
+h1{
+    font-size: 1.5rem;
+    margin-top: 1.5em;
+}
+
+h5 span{
+    font-size: 0.8rem;
+}
+
+.sec p{
+    margin-bottom: 0.2em;
+    font-size: 0.9rem;
+}
+
+.txt-bld{
+    font-weight: 700;
+} 
+.mar-top{
+    margin-top:  15px;
+    margin-bottom: 0;
+}
+
+.tab-wid{
+    width: 135px;
+    display: inline-block;
+    
+}
+
+.pay-details div.box{
+    margin:  30px 20px;
+}
+
+.pay-details p{
+    margin-bottom: 0.5em;
+}
+
+.pay-details .form-row{
+    margin-bottom: 0.8em;
+}
+
+.btn-btm{
+    margin: 30px auto;
+}

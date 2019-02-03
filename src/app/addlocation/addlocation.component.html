@@ -1,0 +1,33 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-sidebar w3-card w3-bar-block w3-black" style="width:15%">
+  <h1>Reboxit</h1>
+  <a  routerLink="/admin" class="w3-bar-item w3-button">User Pickups</a>
+  <a  routerLink="/adminsdreqaggre" class="w3-bar-item w3-button">Scrap Dealer Request</a>
+  <a  routerLink="/adminaggrereqrec" class="w3-bar-item w3-button">Aggregator Request</a>
+  <a  routerLink="/adminrec" class="w3-bar-item w3-button">Recycler Request</a>
+  <a  routerLink="/addlocation" class="w3-bar-item w3-button">Add a new location</a>
+  <a  (click)="logout()" class="w3-bar-item w3-button">Logout</a>
+</div>
+
+<div style="margin-left:15%">
+
+    <header class="w3-container w3-dark-grey text-center">
+      <h1>Admin</h1>
+    </header>
+    <div class="container">
+      <br><br>
+      <form [formGroup]="pickupForm">
+        <div class="form-group row">
+          <label for="inputloc" class="col-sm-2 col-form-label">Location</label>
+          <div class="col-sm-8">
+            <input formControlName="location" type="email" class="form-control" id="inputloc" placeholder="add a new location" [(ngModel)]="pro">
+            {{pro}} will be added.
+          </div>
+          <button class="btn btn-primary" (click)="add()" [disabled]="!pro">Add</button>
+
+        </div>
+      </form>
+    </div>
+</div>

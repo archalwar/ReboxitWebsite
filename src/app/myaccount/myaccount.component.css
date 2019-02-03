@@ -1,0 +1,213 @@
+/* logo & navigation*/
+
+    .bg1{
+        background: #3c8a2e;
+    }    
+
+.poi{
+    cursor: pointer;
+}
+
+/* top header css */
+.header-main{
+    background-color: #fefefe;
+}
+.header-main .brand-logo{
+    width: 100px
+}
+.header-main .brand-logo img{
+    width: 100%;
+    height: auto;
+}
+.border-left {
+    border-left: 2px solid #fff !important;
+}
+
+.rotate {
+    -webkit-transform: rotate(100deg);
+    transform: rotate(100deg);
+}
+
+.drag ul li a {
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 30px;
+}
+.poi span{
+    background-color: #ef1111;
+    margin: 0 5px;
+    padding: 3px 2px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+  }
+/* top header css ends here */
+
+.body-container{
+    background-color: #f2f0f1;
+    padding: 20px;
+}
+
+.body-container .sec{
+    background: #fff;
+    border: 1px solid #3c8a2e;
+    min-height: 800px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    padding: 10px 15px;
+}
+
+.body-container .sec h5, .body-container .sec p.count {
+    color: #3c8a2e;
+}
+
+.tree-img{
+    background: url("../../assets/pngs/tree.png") no-repeat bottom right;  
+    background-size: cover;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.tree-img::after{
+    content: '';
+    background: url("../../assets/pngs/tree.png") no-repeat bottom right;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: -3px;
+    left: 10px;
+    display: inline-block;
+    opacity: 0.3;
+}
+
+
+
+h4::before {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: rgb(33,37,41);
+    position: relative;
+    display: inline-block;
+    top: -4px;
+    margin-right: 15px;
+}
+
+h4::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: rgb(33,37,41);
+    position: relative;
+    display: inline-block;
+    top: -4px;
+    margin-left: 15px;
+
+}
+
+ul.personal-info {
+    padding: 20px 20px 20px 0;
+    list-style: none;
+    margin: 0;
+}
+
+ul.personal-info li label {
+    width: 100px;
+}
+
+/* starts here accordion*/
+section{
+	padding: 30px 0;
+}
+
+#accordion-style-1 h1,
+#accordion-style-1 a{
+    color:#3c8a2e;
+}
+#accordion-style-1 .btn-link {
+    font-weight: 400;
+    color: #3c8a2e;
+    background-color: transparent;
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: bold;
+	padding-left: 25px;
+}
+
+.card{
+    border-radius: 0;
+    margin-bottom: 1em;
+    border: 0;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.card-header{
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.card-header label.bordered{   
+    border-right: 1px solid #000;
+}
+
+.card-header label{
+    margin-bottom: 0rem;
+    padding: 0.5em 1.5em;
+    font-weight: 700;
+    cursor: pointer;
+}
+.card-header label:first-child{
+    padding-left: 0.1em
+}
+.card-header label:last-child{
+    padding-left: 0.1em
+}
+.last{
+    float: right;
+}
+
+#accordion-style-1 .card-body {
+    border-top: 2px solid #007b5e;
+}
+
+#accordion-style-1 .card-header .btn.collapsed .fa.main{
+	display:none;
+}
+
+#accordion-style-1 .card-header .btn .fa.main{
+	background: #007b5e;
+    padding: 13px 11px;
+    color: #ffffff;
+    width: 35px;
+    height: 41px;
+    position: absolute;
+    left: -1px;
+    top: 10px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+	display:block;
+}
+
+.borderless td , .borderless th{
+    border: none;
+}
+
+.download{
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    color: #3c8a2e;
+}
+.download p.download-txt{
+    font-size: 0.8rem
+}
+/*ends here */

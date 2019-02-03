@@ -1,0 +1,165 @@
+<div class="">
+  <div class="">
+    <img src="../assets/images/Categories/logo1.png">
+  </div>
+  <!-----Navigation Starts Here-->
+
+<!--<nav class="navbar navbar-expand-sm navbar-light bg-success">
+    <a class="navbar-brand" href="#">Reboxit</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Price List <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showLogin()">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" (click)="showSignup()">SignUp</a>
+       </li>
+         <li class="nav-item">
+              <a class="nav-link" (click)="showAssociate()">Associates</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link" href="#">Help</a>
+     </li>
+      </ul>
+    
+    </div>
+  </nav>-->
+
+<!----Blocks here---->
+
+  <!---<div class="my-col">
+      <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" style="background:skyblue;">Your Pickups</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" style="background:blue;">Request Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" style="background:green;">Request ScrapeDealer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" style="background:orangered;">My Sheets</a>
+          </li>
+        </ul>
+  </div>-->
+  <div class="contanier"> 
+   
+    <div class="col">
+      <nav class="navbar navbar-expand-sm navbar-light bg-white">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse my-center" id="navbarSupportedContent">
+            <ul class="navbar-nav center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" style="background:skyblue;">Your Pickups</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#" style="background:blue;">Request Admin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#" style="background:green;">Request ScrapeDealer</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#" style="background:orangered;" (click)="showDataForm()">My Sheets</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="#" style="background:orangered;" (click)="showAddForm()">+</a>
+                    </li>
+             
+            </ul>
+          
+          </div>
+        </nav>
+     </div>
+ </div>
+
+ <!------>
+ <div ngIf="dataForm">
+    <div class="container">
+        <div class="main-content">
+          <div class="row">
+            <div class="col-md-12" style="border:1px solid;"> 
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title"> My Data</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class=" text-primary" >
+                        <th>
+                          Usertype
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Phone
+                        </th>
+                        <th>
+                            Username
+                        </th>
+                        <th>
+                            Password
+                        </th>
+                        
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                              house hold
+                          </td>
+                          <td>
+                              
+                          </td>
+                          <td>
+                            
+                          </td>
+                          <td>
+                              
+                          </td>
+                          <td>
+                              
+                          </td>
+                         
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+       </div>
+      </div>
+<!---Add Form-->
+
+    <div *ngIf="addForm">
+      <div class="">
+        <div class="">
+          
+         </div>
+      </div>
+
+    </div>
+  
+
+
+
+</div>

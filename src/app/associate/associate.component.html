@@ -1,0 +1,241 @@
+<div class="main-height">
+  <div class="header-main">
+    <div class="container">
+      <div class="brand-logo">
+        <a routerLink="/landing"> <img src="../assets/images/Categories/logo.png"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-----Navigation Starts Here-->
+
+  <nav class="navbar navbar-expand-sm navbar-light bg1">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse  drag" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/design">Price List </a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/design">Book a Pickup</a>
+          </li>
+          <li class="nav-item poi active">
+            <a class="nav-link" routerLink="/associate">Associates</a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/myaccount"> My Account</a>
+          </li>
+
+          <li class="nav-item poi">
+            <a class="nav-link">Help</a>
+          </li>
+          <li class="nav-item poi border-left">
+            <a class="nav-link rotate"><i class="fa fa-phone"></i></a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!---Form Starts Here-->
+  <div class="bg">
+    <div class="">
+
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-12"></div>
+
+      <div class="col-md-6 col-sm-6 col-xs-12 add">
+
+
+        <!---Associate Form starts here-->
+
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Associates</h1>
+          </div>
+        </div>
+
+        <div class="">
+
+
+
+          <form [formGroup]="associateForm" (ngSubmit)="onSubmit()" class="form-row form2">
+
+            <div class="form-group col-md-6 gap">
+
+              <select formControlName="usertype" class="form-control form-control-sm" name="usertype" id="utype">
+                <option selected value="0"> Please Select Dealer </option>
+                <option value="Scrap"> Scrap Dealer </option>
+                <option value="Associate">Associate</option>
+                <option value="Recycler"> Recycler </option>
+
+              </select>
+
+            </div>
+
+            <div class="form-group col-md-6 gap">
+
+              <input formControlName="companyname" type="text" class="form-control form-control-sm" id="CpasswordInput"
+                aria-describedby="CpassHelp" placeholder="Company Name">
+              <small id="CpassHelp" class="form-text text-muted"></small>
+            </div>
+
+            <!-- <div *ngIf="associateForm.get('usertype').hasError('required') && associateForm.get('usertype').touched" >
+                     usertype is required
+                   </div> -->
+
+            <div class="form-group col-md-6 gap">
+
+              <input formControlName="username" type="text" class="form-control form-control-sm" id="exampleInputUsername"
+                aria-describedby="userHelp" placeholder="User Name">
+              <small id="userHelp"></small>
+            </div>
+
+
+            <div class="form-group col-md-6 gap">
+
+              <input formControlName="email" type="email" class="form-control form-control-sm" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="Enter Email">
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+
+            <div class="form-group col-md-6 gap">
+
+              <input formControlName="password" type="password" class="form-control form-control-sm" id="passwordInput"
+                aria-describedby="passHelp" placeholder="Password">
+              <small id="passHelp" class="form-text text-muted"></small>
+            </div>
+
+
+            <div class="form-group col-md-6 gap">
+
+              <input type="password" class="form-control form-control-sm" id="cpasswordInput" aria-describedby="passHelp"
+                placeholder="Confirm  Password">
+              <small id="passHelp" class="form-text text-muted"></small>
+            </div>
+
+
+            <div class="form-group col-md-6 gap">
+              <select formControlName="scrapetype" class="form-control form-control-sm">
+                <option selected disabled value="0">Scrap Type</option>
+                <option *ngFor="let m of prods" value="{{m}}">{{m}}</option>
+              </select>
+            </div>
+
+
+
+            <!-- <div *ngIf="associateForm.get('email').hasError('required') && associateForm.get('email').touched " class="alert alert-danger">
+                          email is required
+                  </div>
+                  <div *ngIf="associateForm.get('email').hasError('email') " class="alert alert-danger">
+                      email is invalid
+                    </div> -->
+
+
+
+            <!-- <div *ngIf="associateForm.get('username').hasError('required') && associateForm.get('username').touched " class="alert alert-danger">
+                    username is required
+                  </div> -->
+
+
+            <!-- <div *ngIf="associateForm.get('password').hasError('required') && associateForm.get('password').touched" class="alert alert-danger">
+                    password is required
+                  </div>
+                  <div *ngIf="associateForm.get('password').hasError('minlength') " class="alert alert-danger">
+                      password must be 8 characters
+                    </div> -->
+
+
+            <!-- <div *ngIf="associateForm.get('companyname').hasError('required') && associateForm.get('companyname').touched" class="alert alert-danger">
+                      company name  is required
+                    </div> -->
+
+            <div class="form-group col-md-6 gap">
+
+              <select formControlName="doctype" class="form-control form-control-sm" name="doctype" id="dtype"
+                aria-placeholder="Please Select">
+                <option selected disabled value="0"> Please Select Proof </option>
+                <option value="Pan"> Pan </option>
+                <option value="Lisence"> Lisence </option>
+                <option value="shopid"> Shop Id</option>
+
+              </select>
+
+            </div>
+
+            <!-- <div *ngIf="associateForm.get('scrapetype').hasError('required') && associateForm.get('scrapetype').touched " class="alert alert-danger">
+                        scarpe type is required
+                      </div> -->
+
+
+
+
+            <div class="form-group col-md-6 gap">
+              <input formControlName="phone" class="form-control" type="number" class="form-control form-control-sm" id="number"
+                aria-describedby="CpassHelp" placeholder="Phone Number">
+            </div>
+
+
+            <div class="form-group col-md-6 gap">
+
+              <input formControlName="address" type="text" class="form-control form-control-sm" id="address"
+                aria-describedby="CpassHelp" placeholder="Address">
+              <small id="CpassHelp" class="form-text text-muted"></small>
+            </div>
+
+
+            <div class="form-group col-md-6 gap">
+
+              <input formControlName="pincode" type="number" class="form-control form-control-sm" id="CpasswordInput"
+                aria-describedby="CpassHelp" placeholder="Pincode">
+              <small id="CpassHelp" class="form-text text-muted"></small>
+            </div>
+
+
+            <div class="form-group col-md-6 gap">
+              <select id="inputState" formControlName="location" class="form-control form-control-sm" placeholder="select Location">
+                <option selected hidden value="0">Select Location</option>
+                <option *ngFor="let m of location" value={{m}}>{{m}}</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-12 gap">
+
+              <input type="file" class="form-control-file" id="upfile" placeholder="Upload a Proof" (change)="upfile($event)">
+            </div>
+
+
+
+            <!-- <div *ngIf="associateForm.get('address').hasError('required')&& associateForm.get('address').touched " class="alert alert-danger">
+                        address is required
+                      </div>
+                    -->
+
+
+            <div class="gap justify-content-center">
+              <div class="">
+                <button type="submit" id="subi" class="btn btn-success btn-block" [disabled]="!associateForm.valid">Sign
+                  Up</button>
+              </div>
+
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-10"></div>
+    </div>
+
+
+  </div>
+</div>

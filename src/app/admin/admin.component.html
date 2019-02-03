@@ -1,0 +1,76 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-sidebar w3-card w3-bar-block w3-black" style="width:15%">
+  <h1>Reboxit</h1>
+  <a  routerLink="/admin" class="w3-bar-item w3-button">User Pickups</a>
+  <a  routerLink="/adminsdreqaggre" class="w3-bar-item w3-button">Scrap Dealer Request</a>
+  <a  routerLink="/adminaggrereqrec" class="w3-bar-item w3-button">Aggregator Request</a>
+  <a  routerLink="/adminrec" class="w3-bar-item w3-button">Recycler Request</a>
+  <a  routerLink="/addlocation" class="w3-bar-item w3-button">Add a new location</a>
+  <a  (click)="logout()" class="w3-bar-item w3-button">logout</a>
+
+
+</div>
+
+<div style="margin-left:15%">
+
+    <header class="w3-container w3-dark-grey text-center">
+      <h1>Admin</h1>
+    </header>
+
+    <div class=" table-responsive">
+
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Location</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Alternate Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Payment Mode</th>
+                <th scope="col">Slot</th>
+                <th scope="col">Estimated Wt</th>
+                <th scope="col">Asssociate Type</th>
+                <th scope="col">Associate</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of pickup let idx=index">
+                <td>{{i["name"]}}</td>
+                <td>{{i["address"]}}</td>
+                <td>{{i["location"]}}</td>
+                <td>{{i["phone"]}}</td>
+                <td>{{i["alterphone"]}}</td>
+                <td>{{i["email"]}}</td>
+                <td>{{i["payment"]}}</td>
+                <td>{{i["slot"]}}</td>
+                <td>{{i["totalwt"]}} Kgs</td>
+                <td>
+                  <select [(ngModel)]="assTypeSelect[idx]" (change)="updateType(idx)">
+                    <option *ngFor="let m of asstype" value="{{m}}">
+                      {{m}}
+                    </option>
+                  </select>
+                </td>
+
+                <td>
+                    <select [(ngModel)]="assSelect[idx]" (change)="updateAss()">
+                      <option *ngFor="let m of assSelectOptions[idx]" value="{{m}}">
+                        {{m[0]}}
+                      </option>
+                    </select>
+                </td>
+                <td>
+                  <button class="btn btn-primary" (click)="submit(idx)" [disabled]="!assSelect[idx]">Assign</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      
+    </div>
+
+</div>

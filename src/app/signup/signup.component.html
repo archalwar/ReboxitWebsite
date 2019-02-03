@@ -1,0 +1,146 @@
+<div class="main-height">
+  <div class="header-main">
+    <div class="container">
+      <div class="brand-logo">
+        <a routerLink="/landing"> <img src="../assets/images/Categories/logo.png"></a>
+      </div>
+    </div>
+  </div>
+  <!-----Navigation Starts Here-->
+
+  <nav class="navbar navbar-expand-sm navbar-light bg1">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse  drag" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/design">Price List <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/pickup">Book a Pickup</a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/associate">Associates</a>
+          </li>
+          <li class="nav-item poi">
+            <a class="nav-link" routerLink="/myaccount"> My Account</a>
+          </li>
+
+          <li class="nav-item poi">
+            <a class="nav-link">Help</a>
+          </li>
+          <li class="nav-item poi border-left">
+            <a class="nav-link rotate"><i class="fa fa-phone"></i></a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!---Form Starts Here-->
+  <div class="bg">
+    <div class="container">
+
+
+
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-12"></div>
+        <div class="col-md-6 col-sm-6 col-xs-12 add">
+
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Register As User</h1>
+            </div>
+          </div>
+
+          <!---Login Form starts here-->
+
+          <div class="">
+
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="form-group form2 form-container">
+
+              <div class="form-group ">
+                <!-- <label for="exampleInputEmail1">Select Usertype</label> -->
+                <select formControlName="usertype" class="form-control" name="usertype" id="utype">
+                  <option selected value="0"> Please Select </option>
+                  <option value="House_hold "> House hold </option>
+                  <option value="Business"> Business </option>
+                  <option value="Education"> Education </option>
+                  <option value=" Corporate_Offices"> Corporate Offices </option>
+                  <option value="Others"> Others</option>
+                </select>
+
+              </div>
+              <div *ngIf="signupForm.get('usertype').hasError('required')  && signupForm.get('usertype').touched "
+                class="alert alert-danger">
+                User Type is Required
+              </div>
+
+              <div class="form-group ">
+
+                <input type="text" formControlName="username" name="username" class="form-control form-control-sm"
+                  placeholder="Username">
+              </div>
+              <div *ngIf="signupForm.get('username').hasError('required')  && signupForm.get('username').touched "
+                class="alert alert-danger">
+                Username is required
+              </div>
+
+           
+
+              <div class="form-group">
+
+                <input type="text" formControlName="email" name="email" class="form-control form-control-sm"
+                  placeholder="Email I'd">
+              </div>
+              <div *ngIf="signupForm.get('email').hasError('required')  && signupForm.get('email').touched " class="alert alert-danger">
+                Email is required
+              </div>
+
+              <div class="form-group ">
+
+                  <input type="password" formControlName="password" name="password" class="form-control form-control-sm"
+                    placeholder="Password">
+                </div>
+                <div *ngIf="signupForm.get('password').hasError('required')  && signupForm.get('password').touched  "
+                  class="alert alert-danger">
+                  password is required
+                </div>
+                <div *ngIf="signupForm.get('password').hasError('password') " class="alert alert-danger">
+                  Password must be 8 characters required
+                </div>
+
+                <div class="form-group ">
+
+                    <input type="password" formControlName="password" name="password" class="form-control form-control-sm"
+                      placeholder="Confirm Password">
+                  </div>
+                  
+
+              <div class="form-group">
+
+                <input type="text" formControlName="phone" name="phone" class="form-control form-control-sm" id="exampleInputPassword1"
+                  placeholder="Phone Number">
+              </div>
+              <div *ngIf="signupForm.get('phone').hasError('required')  && signupForm.get('phone').touched " class="alert alert-danger">
+                Phone Number is required
+              </div>
+
+              <div class=""></div>
+
+              <button type="submit" class="btn btn-success btn-block">Sign Up</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
